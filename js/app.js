@@ -1,7 +1,12 @@
 const musicBtn = document.getElementById("music-btn");
-musicBtn.autoplay = true;
-function startCountdown(dateString, selector) {
 
+musicBtn.autoplay = true;
+
+musicBtn.play().catch((error) => {
+  console.log("Autoplay bloklandi:", error);
+});
+
+function startCountdown(dateString, selector) {
   const [day, month, year] = dateString.split(".");
   const targetDate = new Date(`${year}-${month}-${day}T00:00:00`).getTime();
   const element = document.querySelector(selector);
@@ -36,6 +41,5 @@ function startCountdown(dateString, selector) {
   updateTimer();
   const timerInterval = setInterval(updateTimer, 1000);
 }
-
 
 startCountdown("08.10.2026", "#countdown");
