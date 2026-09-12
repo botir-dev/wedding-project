@@ -1,0 +1,28 @@
+.hero-section {
+  background-image: url("../img/hero-img.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.map-button {
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    background-image: url("../img/hero-img2.png");
+  }
+
+  .dynamic-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .map-button{
+    display: none !important;
+  }
+}

@@ -1,3 +1,5 @@
+const musicBtn = document.getElementById("music-btn");
+
 function startCountdown(dateString, selector) {
   console.log("na gap");
 
@@ -36,4 +38,5 @@ function startCountdown(dateString, selector) {
   const timerInterval = setInterval(updateTimer, 1000);
 }
 
+musicBtn.autoplay = true
 startCountdown("08.10.2026", "#countdown");

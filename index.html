@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taklifnoma</title>
     <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./js/app.js"></script>
   </head>
   <body>
     <main>
       <!-- hero-section -->
-      <!-- hero-section -->
-      <section
-        class="bg-[url('./img/hero-img.png')] bg-cover bg-center min-h-[100vh] flex flex-col justify-center"
-      >
-        <!-- header-content -->
+      <section class="hero-section">
+        <!-- hero-content -->
         <div
           class="max-w-[1200px] mx-auto w-full flex px-3 justify-center sm:justify-start bg-none text-white sm:text-black"
         >
@@ -48,7 +46,7 @@
               </h1>
             </div>
             <p
-              class="font-garamond-italic text-center text-[18px] text-white t sm:text-black text-stone-800 sm:text-stone-700 mt-2"
+              class="font-garamond-italic text-center text-[15px] sm:text-[18px] text-white t sm:text-black text-stone-800 sm:text-stone-700 mt-2"
             >
               Hayotimizning eng go'zal kunini siz bilan <br />birga
               nishonlashdan baxtiyormiz
@@ -58,8 +56,9 @@
             <div class="mt-[15px] flex justify-between">
               <div class="flex items-center gap-2">
                 <svg
-                  width="40"
-                  height="40"
+                  class="dynamic-icon"
+                  width="40px"
+                  height="40px"
                   viewBox="0 0 15 15"
                   fill="white"
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,8 +71,11 @@
                   ></path>
                 </svg>
                 <span class="flex flex-col">
-                  <span class="font-garamond text-[18px]">8-oktyabr, 2026</span>
-                  <span class="font-garamond text-start text-[#77766F]"
+                  <span class="font-garamond text-[16px] sm:text-[18px]"
+                    >8-oktyabr, 2026</span
+                  >
+                  <span
+                    class="font-garamond text-[14px] sm:text-[16px] text-start text-[#77766F]"
                     >Payshanba</span
                   ></span
                 >
@@ -81,6 +83,7 @@
               <span class="h-full w-[2px] bg-[#77766F]"></span>
               <div class="flex items-center gap-2">
                 <svg
+                  class="dynamic-icon"
                   width="40"
                   height="40"
                   viewBox="0 0 15 15"
@@ -95,8 +98,11 @@
                   ></path>
                 </svg>
                 <span class="flex flex-col">
-                  <span class="font-garamond text-[18px]">13:00</span>
-                  <span class="font-garamond text-start text-[#77766F]"
+                  <span class="font-garamond text-[16px] sm:text-[18px]"
+                    >13:00</span
+                  >
+                  <span
+                    class="font-garamond text-[14px] sm:text-[16px] text-start text-[#77766F]"
                     >Boshlanish vaqti</span
                   ></span
                 >
@@ -113,7 +119,7 @@
         >
           <!-- about content -->
           <div class="px-2 w-full max-w-[420px] pt-[20px]">
-            <h2 class="text-[30px] font-garamond mt-[30pxpx]">
+            <h2 class="text-[20px] sm:text-[30px] font-garamond mt-[30pxpx]">
               Bizning to`yimiz
             </h2>
             <!-- iqtibos -->
@@ -132,21 +138,23 @@
               <span class="text-[#C2A844]">nikoh marosimiga</span> taklif etamiz
             </p>
 
-            <span class="flex flex-col w-fit mt-[30px]">
-              <span class="font-caveat text-[40px] text-stone-900"
-                >Sizni kutamiz</span
-              >
-              <svg
-                class="w-6 h-6 text-white stroke-black stroke-[1.5] mx-auto"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                />
-              </svg>
-            </span>
+            <div class="sm:w-fit w-full flex items-center justify-center">
+              <span class="flex flex-col w-fit mt-[10px] sm:mt-[30px]">
+                <span class="font-caveat text-[40px] text-stone-900"
+                  >Sizni kutamiz</span
+                >
+                <svg
+                  class="w-6 h-6 text-white stroke-black stroke-[1.5] mx-auto"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  />
+                </svg>
+              </span>
+            </div>
           </div>
 
           <img
@@ -180,7 +188,9 @@
         >
           <div>
             <div class="mb-[20px]">
-              <h2 class="text-[30px] font-garamond">Manzil</h2>
+              <h2 class="text-[30px] font-garamond sm:text-start text-center">
+                Manzil
+              </h2>
               <span class="flex gap-2">
                 <svg
                   width="25"
@@ -208,16 +218,19 @@
             </div>
             <a
               href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d973.6917441183962!2d71.17255373825247!3d40.50134743017341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBog'dod%20tumani%20oqsaroy%20to'yxonasi!5e0!3m2!1sru!2s!4v1789098504033!5m2!1sru!2s"
-              class="border-black border flex p-2 w-[150px] justify-center rounded-[8px]"
+              class="border-black border map-button p-2 w-[150px] justify-center rounded-[8px]"
               target="_blank"
             >
               Yo`l xaritasi &#10148;
             </a>
           </div>
-          <div class="sm:w-[400px] md:w-[500px] sm:mt-[0px] h-full mt-[20px] w-full rounded-[16px] overflow-hidden">
+          <div
+            class="sm:w-[400px] md:w-[500px] sm:mt-[0px] h-full mt-[20px] w-full rounded-[16px] overflow-hidden"
+          >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d973.6917441183962!2d71.17255373825247!3d40.50134743017341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBog'dod%20tumani%20oqsaroy%20to'yxonasi!5e0!3m2!1sru!2s!4v1789098504033!5m2!1sru!2s"
-              class="w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d444.9040462951167!2d71.17296971072541!3d40.50111239231019!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bafd005e91d5a7%3A0x9f2490a487cb1fd9!2sAvto%20Diagnostika!5e0!3m2!1sru!2sus!4v1789212744316!5m2!1sru!2sus"
+              class="w-[500px]"
+              style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -226,8 +239,24 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div
+        class="w-full flex flex-col bg-[#F9F5EF] items-center justify-center"
+      >
+        <p class="font-brittany text-[25px]">E`tiboringiz uchun rahmat</p>
+        <svg
+          class="footer-img w-6 h-6 text-white stroke-black stroke-[1.5] mx-auto"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </div>
+    </footer>
 
-    <!-- <audio id="music-btn" src="./music/romantic.mp3"></audio> -->
+    <audio id="music-btn" src="./music/romantic.mp3"></audio>
   </body>
 </html>
