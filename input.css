@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Great Vibes";
+  src:
+    url("./fonts/GreatVibes-Regular.woff2") format("woff2"),
+    url("./fonts/GreatVibes-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    url("CormorantGaramond-LightItalic.woff2") format("woff2"),
+    url("CormorantGaramond-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    url("CormorantGaramond-Light.woff2") format("woff2"),
+    url("CormorantGaramond-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src:
+    url("./fonts/Caveat-Regular.woff2") format("woff2"),
+    url("./fonts/Caveat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@utility font-brittany {
+  font-family: "Great Vibes", sans-serif;
+}
+
+@utility font-caveat {
+  font-family: "Caveat", sans-serif;
+}
+
+/* 1. Oddiy (normal) variant uchun */
+@utility font-garamond {
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
+}
+
+/* 2. Kursiv (italic) variant uchun */
+@utility font-garamond-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
