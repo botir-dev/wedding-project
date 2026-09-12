@@ -12,6 +12,355 @@
   display: flex;
 }
 
+html,
+body {
+  margin: 0;
+}
+
+body.loading {
+  overflow: hidden;
+}
+
+.loader-section {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: #f9f5ef;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-btn {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.loader-section {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f9f5ef;
+  color: #5f5147;
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+/* "Ochish uchun" */
+.loader-section p {
+  margin: 0 0 5px;
+
+  font-size: 30px;
+  color: #8a7465;
+
+  animation: fadeUp 1.2s ease both;
+}
+
+/* Bosing tugmasi */
+.loader-btn {
+  position: relative;
+
+  border: none;
+  background: transparent;
+
+  color: #6f5547;
+  font-size: 40px;
+
+  cursor: pointer;
+
+  animation: fadeUp 1.2s ease 0.2s both;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.loader-btn:hover {
+  color: #a47c62;
+  transform: scale(1.08);
+}
+
+/* Tugma ostidagi dekorativ chiziq */
+.loader-btn::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #a47c62;
+
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+.loader-btn:hover::after {
+  width: 80%;
+}
+
+/* Ochilganda qo'llash uchun */
+.loader-section.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Kirib kelish animatsiyasi */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader-section::before,
+.loader-section::after {
+  content: "♡";
+
+  position: absolute;
+
+  color: #c4a18b;
+  font-size: 45px;
+
+  opacity: 0.35;
+
+  animation: floatHeart 3s ease-in-out infinite;
+}
+
+.loader-section::before {
+  top: 25%;
+  left: 20%;
+}
+
+.loader-section::after {
+  right: 20%;
+  bottom: 25%;
+
+  animation-delay: 1s;
+}
+
+.loader-section {
+  width: 100%;
+  height: 100vh;
+
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f9f5ef;
+  color: #604f43;
+
+  overflow: hidden;
+}
+
+/* Yuqoridagi matn */
+.loader-section p {
+  margin: 0 0 12px;
+
+  font-family: "Garamond", serif;
+  font-style: italic;
+
+  font-size: 25px;
+  letter-spacing: 1px;
+
+  color: #8b7567;
+
+  animation: textAppear 1.2s ease both;
+}
+
+/* BUTTON */
+.loader-btn {
+  position: relative;
+
+  padding: 8px 25px 10px;
+
+  border: 1px solid rgba(139, 117, 103, 0.45);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  font-family: "Caveat", cursive;
+  font-size: 42px;
+  line-height: 1;
+
+  color: #604f43;
+
+  cursor: pointer;
+
+  /* Tugmaligi bilinishi uchun */
+  box-shadow:
+    0 0 0 1px rgba(139, 117, 103, 0.08),
+    0 5px 18px rgba(96, 79, 67, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+
+  animation:
+    buttonAppear 1.2s ease 0.3s both,
+    buttonGlow 2s ease-in-out 1.5s infinite;
+}
+
+/* Hover */
+.loader-btn:hover {
+  transform: scale(1.06);
+
+  background: rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    0 0 0 1px rgba(139, 117, 103, 0.15),
+    0 8px 25px rgba(139, 117, 103, 0.18);
+}
+
+/* CLICK */
+.loader-btn:active {
+  transform: scale(0.96);
+}
+
+/* Tugma atrofidagi "nur" */
+.loader-btn::before {
+  content: "";
+
+  position: absolute;
+  inset: -8px;
+
+  border-radius: 60px;
+
+  border: 1px solid rgba(164, 124, 98, 0.2);
+
+  animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* Yana tashqi glow */
+.loader-btn::after {
+  content: "";
+
+  position: absolute;
+  inset: -15px;
+
+  border-radius: 70px;
+
+  box-shadow: 0 0 25px rgba(164, 124, 98, 0.15);
+
+  opacity: 0;
+
+  animation: outerGlow 2s ease-in-out infinite;
+}
+
+/* BUTTON GLOW */
+@keyframes buttonGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(139, 117, 103, 0.08),
+      0 5px 18px rgba(96, 79, 67, 0.08);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(139, 117, 103, 0.18),
+      0 0 20px rgba(164, 124, 98, 0.28),
+      0 8px 30px rgba(164, 124, 98, 0.18);
+  }
+}
+
+/* Ichki halqa */
+@keyframes pulseRing {
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 0.65;
+  }
+}
+
+/* Tashqi nur */
+@keyframes outerGlow {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* Matn chiqishi */
+@keyframes textAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button chiqishi */
+@keyframes buttonAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatHeart {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-10deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(10deg);
+  }
+}
+
+
+
 @media (max-width: 640px) {
   .hero-section {
     background-image: url("../img/hero-img2.png");
@@ -22,7 +371,7 @@
     height: 16px !important;
   }
 
-  .map-button{
+  .map-button {
     display: none !important;
   }
 }

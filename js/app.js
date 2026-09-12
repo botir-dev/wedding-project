@@ -1,9 +1,12 @@
-const musicBtn = document.getElementById("music-btn");
+const loader = document.querySelector(".loader-section");
+const loaderBtn = document.querySelector(".loader-btn");
+const music = document.querySelector("#music-btn");
 
-musicBtn.autoplay = true;
+loaderBtn.addEventListener("click", () => {
+  loader.classList.add("hide");
+  document.body.style.overflow = "";
 
-musicBtn.play().catch((error) => {
-  console.log("Autoplay bloklandi:", error);
+  music.play();
 });
 
 function startCountdown(dateString, selector) {
